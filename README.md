@@ -64,11 +64,27 @@ The skill is just a shell script + an API. You can also call it directly:
 ```bash
 git clone https://github.com/WannabDad/aeo-brand-scan.git
 cd aeo-brand-scan
-chmod +x scripts/scan.sh
-./scripts/scan.sh "Your Brand" "Competitor 1,Competitor 2" "your category" "yourbrand.com" "comp1.com,comp2.com"
+chmod +x skills/scan/scripts/scan.sh
+./skills/scan/scripts/scan.sh "Your Brand" "Competitor 1,Competitor 2" "your category" "yourbrand.com" "comp1.com,comp2.com"
 ```
 
 The trailing two arguments are **optional** — provide them to enable brand logo display via Clearbit.
+
+### Repository structure
+
+```text
+aeo-brand-scan/
+├── .claude-plugin/
+│   └── plugin.json          # Anthropic plugin manifest
+├── skills/
+│   └── scan/
+│       ├── SKILL.md         # Skill instructions for Claude
+│       └── scripts/
+│           └── scan.sh      # POSIX shell that curls the API
+├── README.md
+├── LICENSE
+└── CHANGELOG.md
+```
 
 ## Example output
 

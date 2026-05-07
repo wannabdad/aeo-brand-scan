@@ -18,13 +18,17 @@ You help users understand how AI search engines describe their brand compared to
 
    Frame the website inputs as optional in one short sentence so users skip them if they don't want to type domains.
 
-2. **Run the scan**:
+2. **Run the scan** by invoking the script that lives next to this SKILL.md.
+
+   The script is at `scripts/scan.sh` relative to the directory containing this SKILL.md file. Locate it (e.g. via `find . -name scan.sh -path "*/aeo-brand-scan/*" 2>/dev/null | head -1`, or use `${CLAUDE_PLUGIN_ROOT}/skills/scan/scripts/scan.sh` if the plugin runtime sets that variable). Then invoke:
 
    ```bash
-   bash scripts/scan.sh "$BRAND" "$COMP1,$COMP2,$COMP3" "$CATEGORY" "$BRAND_DOMAIN" "$COMP_DOMAINS_CSV"
+   bash <path-to-scan.sh> "$BRAND" "$COMP1,$COMP2,$COMP3" "$CATEGORY" "$BRAND_DOMAIN" "$COMP_DOMAINS_CSV"
    ```
 
-   If the user didn't provide domains, omit those positional arguments — the scan still works, the result just won't include logos.
+   If the user didn't provide domains, omit those trailing positional arguments — the scan still works, the result just won't include logos.
+
+   Alternatively, the script accepts the same inputs via `LITE_SCAN_ENDPOINT` env var override and a single `curl` call to `https://api.genpicked.com/api/lite-scan` — see `scripts/scan.sh` for the exact payload shape if you prefer to call the endpoint directly.
 
 3. **Render the JSON response** as a markdown report in this exact order:
 

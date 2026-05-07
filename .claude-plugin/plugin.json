@@ -1,0 +1,24 @@
+{
+  "name": "aeo-brand-scan",
+  "description": "Free AEO / GEO / AI search visibility check. Scores how ChatGPT, Claude, and Perplexity describe your brand vs competitors. Use when an agency, marketer, or business owner asks about brand visibility in AI search, answer engine optimization, generative engine optimization, share of voice in LLMs, ChatGPT brand mentions, or whether their brand shows up in AI-generated answers.",
+  "version": "0.1.1",
+  "author": {
+    "name": "GenPicked",
+    "email": "support@genpicked.com"
+  },
+  "homepage": "https://genpicked.com/free-tools",
+  "repository": "https://github.com/WannabDad/aeo-brand-scan",
+  "license": "MIT",
+  "keywords": [
+    "aeo",
+    "geo",
+    "answer-engine-optimization",
+    "ai-search-optimization",
+    "brand-visibility",
+    "chatgpt-seo",
+    "claude-seo",
+    "perplexity-seo",
+    "share-of-voice",
+    "ai-citation-tracking"
+  ]
+}
