@@ -166,7 +166,7 @@ If you're an agency selling AEO to clients at $2–12K per audit, the white-labe
 - **No account, no API key, no signup required.**
 - IP addresses are SHA-256 hashed before any logging.
 - Rate-limited: 5 scans per IP per 24 hours, 50 per source per hour, hard $50/day cost cap globally.
-- Full privacy policy: [genpicked.com/legal/aeo-brand-scan-privacy](https://genpicked.com/legal/aeo-brand-scan-privacy)
+- Full privacy policy: [genpicked.com/privacy/aeo-brand-scan](https://genpicked.com/privacy/aeo-brand-scan)
 
 ## FAQ
 
